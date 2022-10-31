@@ -18,9 +18,12 @@ public class Program {
     	list.add(new Product("Tablet", 350.50));
     	list.add(new Product("Mouse", 80.90));
     	
-    	Predicate<Product> pred = p -> p.getPrice() >= 100.0;
+    	// Expressão lambda declarada
+    	/*
+    	Predicate<Product> pred = p -> p.getPrice() >= 100.0;*/
     	
-    	list.removeIf(pred);
+    	//Expressão lambda inline
+    	list.removeIf(p -> p.getPrice() >= 100.0);
     	
     	list.forEach(System.out::println);
     }

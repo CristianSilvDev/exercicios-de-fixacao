@@ -27,6 +27,11 @@ public class Product {
 	public int hashCode() {
 		return Objects.hash(name, price);
 	}
+	
+	public static boolean staticProductPredicate(Product p) {
+		return p.getPrice() >= 100.00;
+	}
+	
 
 	@Override
 	public String toString() {

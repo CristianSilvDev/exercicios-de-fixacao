@@ -28,7 +28,14 @@ public class Product {
 		return Objects.hash(name, price);
 	}
 	
+	public static String staticUpperCaseName(Product p) {
+		return p.getName().toUpperCase();
+	}
 
+	public String nonStaticUpperCaseName() {
+		return name = name.toUpperCase();
+	}
+	
 	@Override
 	public String toString() {
 		return  name + ", " + String.format("%.2f", price);

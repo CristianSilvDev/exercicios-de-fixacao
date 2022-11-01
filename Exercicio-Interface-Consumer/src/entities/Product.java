@@ -28,12 +28,8 @@ public class Product {
 		return Objects.hash(name, price);
 	}
 	
-	public static boolean staticProductPredicate(Product p) {
-		return p.getPrice() >= 100.00;
-	}
-	
-	public boolean nonStaticProductPredicate() {
-		return price >= 100.00;
+	public static void staticPriceUpdate(Product p) {
+		p.setPrice(p.getPrice() * 1.1);
 	}
 
 	@Override

@@ -20,8 +20,11 @@ public class Program {
     	list.add(new Product("Mouse", 80.90));
     	
    
-    	list.forEach(new PriceUpdate());
+    	// Implementação da interface
+    	/*list.forEach(new PriceUpdate());
+    	list.forEach(System.out::println);*/
     	
+    	list.forEach(Product::staticPriceUpdate);
     	list.forEach(System.out::println);
     	
     }

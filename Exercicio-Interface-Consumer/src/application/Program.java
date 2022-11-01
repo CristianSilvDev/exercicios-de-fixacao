@@ -2,10 +2,9 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
+import java.util.function.Consumer;
 
 import entities.Product;
-import util.PriceUpdate;
 
 public class Program {
 	
@@ -24,8 +23,21 @@ public class Program {
     	/*list.forEach(new PriceUpdate());
     	list.forEach(System.out::println);*/
     	
+    	/* Solução com o método estático
     	list.forEach(Product::staticPriceUpdate);
-    	list.forEach(System.out::println);
+    	list.forEach(System.out::println);*/
     	
+    	/*Solução com o método não estático
+    	list.forEach(Product::nonStaticPriceUpdate);
+    	list.forEach(System.out::println);*/
+    	
+    	/* Solução com expressão lambda declarada
+    	Consumer<Product> cons = p -> p.setPrice(p.getPrice() * 1.1);
+    	list.forEach(cons);
+    	list.forEach(System.out::println);*/
+    	
+    	//Solução com expressão lambda inline
+    	list.forEach(p -> p.setPrice(p.getPrice() * 1.1));
+    	list.forEach(System.out::println);
     }
 }

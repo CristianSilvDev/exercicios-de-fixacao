@@ -4,7 +4,7 @@ O que é JDBC? É uma API padrão do Java para acesso a dados.
 
 Pacotes: java.sql e javax.sql;
 
-Nesse exercício tive meu primeiro contato com JDBC, pude entender sobre as funções Statement e ResultSet, PreparedStatement, executeUpdate, Statement.RETURN_GENERATED_KEYS, getGeneratedKeys;
+Nesse exercício tive meu primeiro contato com JDBC, pude entender sobre as funções Statement e ResultSet;
 
 API:
 

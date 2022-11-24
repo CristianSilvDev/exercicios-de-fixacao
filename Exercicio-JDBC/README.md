@@ -6,7 +6,8 @@ Pacotes: java.sql e javax.sql;
 
 Nesse exercício tive meu primeiro contato com JDBC, pude compreender sobre Restrição, Projeção, Produto Cartesiano e Junção;
 
-Checklist:
+Checklist:	
+
 • Usando o MySQL Workbench, crie uma base de dados chamada "coursejdbc"
 • Baixar o MySQL Java Connector
 • Caso ainda não exista, criar uma User Library contendo o arquivo .jar do driver do MySQL
@@ -16,6 +17,7 @@ Checklist:
 	o Add external JARs -> (localize o arquivo jar)
 
 • Criar um novo Java Project
+
 	o Acrescentar a User Library MySQLConnector ao projeto
 
 • Na pasta raiz do projeto, criar um arquivo "db.properties" contendo os dados de conexão:

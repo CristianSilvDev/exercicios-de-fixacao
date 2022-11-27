@@ -7,7 +7,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import model_entities.AgenciaAerea;
-import model_entities.AgenciaAeria;
+import model_entities.Cliente;
 
 public class Application {
 
@@ -15,6 +15,7 @@ public class Application {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		AgenciaAerea agenciaAerea = new AgenciaAerea();
 
 		System.out.println("------------------------------");
 		System.out.println("      AGENCIA AÉREA - PL      ");
@@ -22,10 +23,10 @@ public class Application {
 
 		System.out.println("SEJA BEM-VINDO(A) AO NOSSO APLICATIVO COMPRA-RÁPIDA DE PASSAGEM AÉREA.");
 		System.out.print("VOCÊ DESEJA COMPRAR UMA PASSAGEM AÉREA? (S/N) ");
-		char ch = sc.next().charAt(0);
+		char ch = sc.next().toUpperCase().charAt(0);
 		if (ch == 'S') {
 			System.out.print("DIGITE SEU NOME: ");
-			sc.nextLine();
+			sc.next();
 			String nome = sc.nextLine();
 			System.out.print("DIGITE SEU CPF (000-000-000-00): ");
 			String cpf = sc.next();
@@ -41,12 +42,10 @@ public class Application {
 			System.out.print("VALOR: ");
 			sc.nextLine();
 			double valor = sc.nextDouble();
-			AgenciaAerea agenciaAerea = new AgenciaAerea(nome, cpf, dataIda, dataVolta, origem, destino, valor);
-			System.out.println("------------------------------");
-			System.out.println("      AGENCIA AÉREA - PL      ");
-			System.out.println("------------------------------");
+			Cliente cliente = new Cliente(nome, cpf, dataIda, dataVolta, origem, destino, valor);
+
 			
-			System.out.print(agenciaAerea);
+			System.out.print(cliente);
 
 		} else {
 			System.out.println("ENCERRANDO O PROGRAMA, ATÉ A PRÓXIMA!");

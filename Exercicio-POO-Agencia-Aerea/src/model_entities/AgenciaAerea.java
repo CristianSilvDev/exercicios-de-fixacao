@@ -4,8 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class AgenciaAerea {
-	private String nome;
-	private String cpf;
+	
 	private Date dataIda;
 	private Date dataVolta;
 	private String origem;
@@ -14,27 +13,19 @@ public class AgenciaAerea {
 	
 	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	
-	public AgenciaAerea(String nome, String cpf, Date dataIda, Date dataVolta, String origem, String destino, double valor) {
-		this.nome = nome;
-		this.cpf = cpf;
+	public AgenciaAerea() {
+		
+	}
+	
+	public AgenciaAerea( Date dataIda, Date dataVolta, String origem, String destino, double valor) {
 		this.dataIda = dataIda;
 		this.dataVolta = dataVolta;
 		this.origem = origem;
 		this.destino = destino;
 		this.valor = valor;
 	}
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	public String getCpf() {
-		return cpf;
-	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
+	
+
 	public Date getDataIda() {
 		return dataIda;
 	}
@@ -66,21 +57,7 @@ public class AgenciaAerea {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
-	@Override
-	public String toString() {
-		return "OBRIGADO POR ESCOLHER A NOSSA AGENCIA AEREA\n" +
-				"DADOS DA COMPRA\n" +
-				"ORIGEM: " + getOrigem()+"\n" + "Destino: " + getDestino()+"\n" +
-				"VALOR: R$ " + String.format("%.2f", getValor())+ "\n" +
-				"NOME DO PASSAGEIRO: " + getNome()+"\n" +
-				"CPF: " + getCpf()+ "\n" + 
-				"DATA DE IDA: " + sdf.format(getDataIda()) + "\n" +
-				"DATA DE VOLTA: " + sdf.format(getDataVolta()) + "\n" + 
-				"TICKET: 4943240242\n" +
-				"DESEJAMOS UM EXCELENTE VÔO \n" + 
-				"EM CASO DE PROBLEMA ENTRE EM CONTATO CONOSCO 4393-9349\n";
-				
-	}
+
 	
 	
 }

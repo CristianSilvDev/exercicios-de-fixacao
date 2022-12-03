@@ -14,11 +14,20 @@ public class Program {
 		
 		System.out.println(Arrays.toString(notasAlunoA));
 		
-		double media = 0;
+		double totalA = 0;
 		for (int i =0; i< notasAlunoA.length; i++) {
-			media += notasAlunoA[i];
+			totalA += notasAlunoA[i];
 		}
 		
-		System.out.println(String.format("%.2f", media / notasAlunoA.length));
+		System.out.println(String.format("%.2f", totalA / notasAlunoA.length));
+		
+		double [] notasAlunosB = {6.9, 8.9, 5.5, 10};
+		
+		double totalB = 0;
+		for (int i = 0; i < notasAlunosB.length; i++) {
+			totalB += notasAlunosB[i];
+		}
+		System.out.println();
+		System.out.println(String.format("%.2f",totalB / notasAlunosB.length));
 	}
 }

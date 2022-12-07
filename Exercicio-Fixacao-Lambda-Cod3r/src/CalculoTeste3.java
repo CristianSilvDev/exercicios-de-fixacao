@@ -3,8 +3,7 @@ import java.util.function.BinaryOperator;
 public class CalculoTeste3 {
 	public static void main(String[] args) {
 		
-		// NÃO: int -> Double
-		// double -> Double
+		
 		
 		BinaryOperator<Double> soma = (x, y) -> { return x + y; };
 		System.out.println(soma.apply(1.0, 3.0));

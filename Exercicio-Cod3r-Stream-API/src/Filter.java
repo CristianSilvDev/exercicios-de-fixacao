@@ -1,5 +1,7 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class Filter {
@@ -18,10 +20,32 @@ public class Filter {
 		Aluno a5 = new Aluno("Rebeca", 7.1);
 		Aluno a6 = new Aluno("Pedro", 8.8);
 
-		List<Aluno> alunos = Arrays.asList(a1, a2, a3, a4, a5, a6);
+		// Primeira Maneira
+		/*List<Aluno> alunos = Arrays.asList(a1, a2, a3, a4, a5, a6);
 		alunos.stream()
 		.filter(a -> a.nota >= 7)
 		.map(a -> "Parabéns " + a.nome + " você foi aprovado")
+		.forEach(System.out::println);*/
+		
+		//Segunda Forma
+		
+		/*Predicate<Aluno> aprovado = a -> a.nota >= 7;
+		
+		List<Aluno> alunos = Arrays.asList(a1, a2, a3, a4, a5, a6);
+		alunos.stream()
+		.filter(aprovado)
+		.map(a -> "Parabéns " + a.nome + " você foi aprovado")
+		.forEach(System.out::println);*/
+		
+		
+		// Terceira maneira
+		Predicate<Aluno> aprovado = a -> a.nota >= 7;
+		Function<Aluno, String> saudacaoAprovado = a -> "Parabéns " + a.nome + " você foi aprovado";
+		
+		List<Aluno> alunos = Arrays.asList(a1, a2, a3, a4, a5, a6);
+		alunos.stream()
+		.filter(aprovado)
+		.map(saudacaoAprovado)
 		.forEach(System.out::println);
 	}
 }

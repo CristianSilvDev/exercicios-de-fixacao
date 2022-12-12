@@ -11,7 +11,7 @@ public class Filter {
 		//.stream() para transformar em Stream
 		// .collect(Collectores.toList()) para transformar em List novamente
 		//numeros.stream().filter(s -> s % 2 == 0).collect(Collectors.toList()).forEach(System.out::println);
-		
+		 
 		
 		Aluno a1 = new Aluno("Ana", 7.8, false);
 		Aluno a2 = new Aluno("Bia", 5.8, true);

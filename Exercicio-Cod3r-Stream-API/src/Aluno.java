@@ -13,4 +13,11 @@ public class Aluno {
 		this.nota = nota;
 		this.comportamento = comportamento;
 	}
+
+	@Override
+	public String toString() {
+		return "Aluno [nome=" + nome + ", nota=" + nota;
+	}
+	
+	
 }

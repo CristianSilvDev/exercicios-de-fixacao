@@ -16,9 +16,9 @@ public class Media {
 	}
 	
 	public static Media combinar(Media m1, Media m2) {
-		Media resultante = new Media();
-		resultante.total = m1.total + m2.total;
-		resultante.quantidade = m1.quantidade + m2.quantidade;
-		return resultante;
+		Media result = new Media();
+		result.total = m1.total + m2.total;
+		result.quantidade = m1.quantidade + m2.quantidade;
+		return result;
 	}
 }
